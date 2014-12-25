@@ -986,7 +986,7 @@ function Build-Project($project)
 
 function Get-EntityFrameworkInstallPath($project)
 {
-    $package = Get-Package -ProjectName $project.FullName | ?{ $_.Id -eq 'EntityFramework' }
+    $package = Get-Package -ProjectName $project.FullName | ?{ $_.Id -eq 'EntityFrameworkWithHierarchyId' }
 
     if (!$package)
     {

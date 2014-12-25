@@ -557,6 +557,12 @@ namespace SampleEntityFrameworkProvider
                 case PrimitiveTypeKind.Guid:
                     return SqlDbType.UniqueIdentifier;
 
+                case PrimitiveTypeKind.HierarchyId:
+                    {
+                        udtName = "hierarchyid";
+                        return SqlDbType.Udt;
+                    }
+
                 case PrimitiveTypeKind.Int16:
                     return SqlDbType.SmallInt;
 

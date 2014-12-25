@@ -186,7 +186,7 @@ namespace System.Data.Entity.ConnectionFactoryConfig
 
             // Hard coding this so that we don't need to load EntityFramework.dll to get it.
             const string entityFrameworkSectionName =
-                "System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version={0}, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+                "System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version={0}, Culture=neutral, PublicKeyToken=6847f3395fc61b47";
 
             var efSectionTypeName = string.Format(
                 CultureInfo.InvariantCulture, entityFrameworkSectionName,

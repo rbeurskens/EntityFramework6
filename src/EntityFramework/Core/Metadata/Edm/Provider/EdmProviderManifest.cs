@@ -5,6 +5,7 @@ namespace System.Data.Entity.Core.Metadata.Edm.Provider
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Data.Entity.Core.Common;
+    using System.Data.Entity.Hierarchy;
     using System.Data.Entity.Spatial;
     using System.Data.Entity.Utilities;
     using System.Diagnostics;
@@ -125,6 +126,7 @@ namespace System.Data.Entity.Core.Metadata.Edm.Provider
             primitiveTypes[(int)PrimitiveTypeKind.Double] = new PrimitiveType();
             primitiveTypes[(int)PrimitiveTypeKind.Single] = new PrimitiveType();
             primitiveTypes[(int)PrimitiveTypeKind.Guid] = new PrimitiveType();
+            primitiveTypes[(int)PrimitiveTypeKind.HierarchyId] = new PrimitiveType();
             primitiveTypes[(int)PrimitiveTypeKind.Int16] = new PrimitiveType();
             primitiveTypes[(int)PrimitiveTypeKind.Int32] = new PrimitiveType();
             primitiveTypes[(int)PrimitiveTypeKind.Int64] = new PrimitiveType();
@@ -163,6 +165,9 @@ namespace System.Data.Entity.Core.Metadata.Edm.Provider
             InitializePrimitiveType(
                 primitiveTypes[(int)PrimitiveTypeKind.Single], PrimitiveTypeKind.Single, EdmConstants.Single, typeof(Single));
             InitializePrimitiveType(primitiveTypes[(int)PrimitiveTypeKind.Guid], PrimitiveTypeKind.Guid, EdmConstants.Guid, typeof(Guid));
+            InitializePrimitiveType(
+                primitiveTypes[(int)PrimitiveTypeKind.HierarchyId], PrimitiveTypeKind.HierarchyId, EdmConstants.HierarchyId,
+                typeof(HierarchyId));
             InitializePrimitiveType(
                 primitiveTypes[(int)PrimitiveTypeKind.Int16], PrimitiveTypeKind.Int16, EdmConstants.Int16, typeof(Int16));
             InitializePrimitiveType(
@@ -887,6 +892,12 @@ namespace System.Data.Entity.Core.Metadata.Edm.Provider
             #region Spatial Functions
 
             EdmProviderManifestSpatialFunctions.AddFunctions(functions);
+
+            #endregion
+
+            #region HierarchyId Functions
+
+            EdmProviderManifestHierarchyIdFunctions.AddFunctions(functions);
 
             #endregion
 

@@ -58,12 +58,12 @@ namespace System.Data.Entity.ConnectionFactoryConfig
         [Fact]
         public void TryRemoveSystemDataEntity_finds_and_removes_System_Data_Entity()
         {
-            var toRemove = CreateMockReference("System.Data.Entity", "B77A5C561934E089");
+            var toRemove = CreateMockReference("System.Data.Entity", "6847F3395FC61B47");
             var references = new List<Mock<Reference>>
                 {
-                    CreateMockReference("EntityFramework", "B77A5C561934E089"),
+                    CreateMockReference("EntityFramework", "6847F3395FC61B47"),
                     toRemove,
-                    CreateMockReference("System.Data", "B77A5C561934E089"),
+                    CreateMockReference("System.Data", "6847F3395FC61B47"),
                 };
 
             new ReferenceRemover(CreateMockProject(references.Select(r => r.Object)).Object).TryRemoveSystemDataEntity();

@@ -30,7 +30,7 @@ namespace System.Data.Entity.ConnectionFactoryConfig
         private static readonly Version _net40EntityFrameworkVersion = new Version("6.0.0.0");
 
         private const string EntityFrameworkSectionFormat =
-            "System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version={0}, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+            "System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version={0}, Culture=neutral, PublicKeyToken=6847f3395fc61b47";
 
         private static readonly string _net45EntityFrameworkSectionName = string.Format(
             CultureInfo.InvariantCulture, EntityFrameworkSectionFormat, _net45EntityFrameworkVersion);

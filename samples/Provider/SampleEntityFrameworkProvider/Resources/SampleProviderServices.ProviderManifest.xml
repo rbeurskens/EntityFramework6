@@ -171,6 +171,8 @@ PROCESS
     </Type>
     <Type Name="uniqueidentifier" PrimitiveTypeKind="Guid">
     </Type>
+    <Type Name="hierarchyid" PrimitiveTypeKind="HierarchyId">
+    </Type>
     <Type Name="xml" PrimitiveTypeKind="String" >
       <FacetDescriptions>
         <MaxLength DefaultValue="1073741823" Constant="true" />

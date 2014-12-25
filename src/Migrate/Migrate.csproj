@@ -17,7 +17,7 @@
     <FileAlignment>512</FileAlignment>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\EcmaPublicKey.snk</AssemblyOriginatorKeyFile>
-    <DelaySign>true</DelaySign>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>

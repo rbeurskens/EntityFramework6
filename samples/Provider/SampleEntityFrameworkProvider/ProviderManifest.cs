@@ -213,6 +213,7 @@ namespace SampleEntityFrameworkProvider
                 case "bigint":
                 case "bit":
                 case "uniqueidentifier":
+                case "hierarchyid":
                 case "int":
                 case "geography":
                 case "geometry":
@@ -389,6 +390,9 @@ namespace SampleEntityFrameworkProvider
 
                 case PrimitiveTypeKind.Guid:
                     return TypeUsage.CreateDefaultTypeUsage(StoreTypeNameToStorePrimitiveType["uniqueidentifier"]);
+
+                case PrimitiveTypeKind.HierarchyId:
+                    return TypeUsage.CreateDefaultTypeUsage(StoreTypeNameToStorePrimitiveType["hierarchyid"]);
 
                 case PrimitiveTypeKind.Double:
                     return TypeUsage.CreateDefaultTypeUsage(StoreTypeNameToStorePrimitiveType["float"]);

@@ -10,7 +10,7 @@ namespace System.Data.Entity.ConnectionFactoryConfig
     internal class ReferenceRemover
     {
         private const string SystemDataEntityIdentity = "System.Data.Entity";
-        private const string SystemDataEntityPublicKeyToken = "b77a5c561934e089";
+        private const string SystemDataEntityPublicKeyToken = "6847f3395fc61b47";
 
         private readonly Project _project;
 

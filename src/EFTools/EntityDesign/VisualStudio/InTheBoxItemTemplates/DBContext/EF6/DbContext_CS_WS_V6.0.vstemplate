@@ -43,7 +43,7 @@
 
   <WizardData>
     <packages repository="registry" keyName="NUGETEFTOOLSPACKAGESREGKEYNAMETOKEN" isPreunzipped="true">
-      <package id="EntityFramework" version="EFPACKAGEVERSION" />
+      <package id="EntityFrameworkWithHierarchyId" version="EFPACKAGEVERSION" />
     </packages>
   </WizardData>
 

@@ -15,7 +15,7 @@
     <FileAlignment>512</FileAlignment>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\EcmaPublicKey.snk</AssemblyOriginatorKeyFile>
-    <DelaySign>true</DelaySign>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -126,6 +126,7 @@
     <Compile Include="SqlGen\BoolWrapper.cs" />
     <Compile Include="SqlGen\DmlFunctionSqlGenerator.cs" />
     <Compile Include="SqlGen\DmlSqlGenerator.cs" />
+    <Compile Include="SqlHierarchyIdFunctions.cs" />
     <Compile Include="SqlGen\SqlStringBuilder.cs" />
     <Compile Include="SqlGen\SkipClause.cs" />
     <Compile Include="SqlServerMigrationSqlGenerator.cs" />

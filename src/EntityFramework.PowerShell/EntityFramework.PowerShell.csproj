@@ -15,7 +15,7 @@
     <FileAlignment>512</FileAlignment>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\EcmaPublicKey.snk</AssemblyOriginatorKeyFile>
-    <DelaySign>true</DelaySign>
+    <DelaySign>false</DelaySign>
     <TargetFrameworkProfile />
     <BuildPackages>true</BuildPackages>
   </PropertyGroup>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<assemblies defaultPublicKeyToken="b77a5c561934e089">
+<assemblies defaultPublicKeyToken="6847f3395fc61b47">
 
   <!-- Production assemblies -->
   <assembly name="EntityFramework" />
