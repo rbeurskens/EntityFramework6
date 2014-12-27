@@ -3,6 +3,7 @@
 namespace System.Data.Entity.Hierarchy
 {
     using System.Collections.Generic;
+    using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
     using System.Linq;
@@ -14,7 +15,7 @@ namespace System.Data.Entity.Hierarchy
     /// </summary>
     [DataContract]
     [Serializable]
-    public class HierarchyId
+    public class HierarchyId : IComparable
     {
         private readonly string _hierarchyId;
         private readonly int[][] _nodes;
@@ -490,6 +491,23 @@ namespace System.Data.Entity.Hierarchy
         public override string ToString()
         {
             return _hierarchyId;
+        }
+
+        /// <summary>
+        /// Implementation of IComparable.CompareTo()
+        /// </summary>
+        /// <param name="obj"> The object to compare to </param>
+        /// <returns> 0 if the HierarchyIds are "equal" (i.e., have the same _hierarchyId value) </returns>
+        public int CompareTo(object obj)
+        {
+            var loader = obj as HierarchyId;
+            if (loader != null)
+            {
+                return Compare(this, (HierarchyId)obj);
+            }
+
+            Debug.Assert(false, "object is not a HierarchyId");
+            return -1;
         }
     }
 }
