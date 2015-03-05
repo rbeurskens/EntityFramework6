@@ -406,7 +406,7 @@ namespace System.Data.Entity.ProductivityApi
             {
                 var objectContext = ((IObjectContextAdapter)outerContext).ObjectContext;
                 objectContext.CommandTimeout = 77;
-                
+
                 using (var context = new TimeoutContext(objectContext))
                 {
                     Assert.Equal(77, context.Database.CommandTimeout);
@@ -419,6 +419,15 @@ namespace System.Data.Entity.ProductivityApi
                     Assert.Equal(99, context.Database.CommandTimeout);
                     Assert.Equal(99, objectContext.CommandTimeout);
                 }
+            }
+        }
+
+        [Fact]
+        public void Command_timeout_can_be_can_be_set_in_config()
+        {
+            using (var context = new ConfiguredTimeoutContext())
+            {
+                Assert.Equal(66, context.Database.CommandTimeout);
             }
         }
 
@@ -472,6 +481,10 @@ namespace System.Data.Entity.ProductivityApi
 
             public DbSet<SomeSpace> Space { get; set; }
             public DbSet<SomeTime> Time { get; set; }
+        }
+
+        public class ConfiguredTimeoutContext : TimeoutContext
+        {
         }
     }
 }

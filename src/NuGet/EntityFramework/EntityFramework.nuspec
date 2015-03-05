@@ -7,7 +7,7 @@
     <iconUrl>http://go.microsoft.com/fwlink/?LinkID=386613</iconUrl>
     <authors>Microsoft, ZGabi</authors>
     <owners>Microsoft, ZGabi</owners>
-    <tags>Microsoft EF Database Data O/RM ADO.NET HIERARCHYID</tags>
+    <tags>Microsoft EntityFramework EF Database Data O/RM ADO.NET HIERARCHYID</tags>
     <projectUrl>https://entityframework.codeplex.com/SourceControl/network/forks/zgabi/efhierarchyid</projectUrl>
     <licenseUrl>http://go.microsoft.com/fwlink/?LinkID=$LicenseUrlFwLinkID$</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
